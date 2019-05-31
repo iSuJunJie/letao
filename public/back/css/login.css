@@ -1,0 +1,12 @@
+/* body背景色 */
+body {
+  background-color: #222D32;
+}
+/* 登录框 */
+.lt-login {
+  margin-top: 150px;
+}
+.lt-login .panel-title {
+  line-height: 40px;
+  font-size: 20px;
+}
