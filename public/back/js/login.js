@@ -28,13 +28,9 @@ $(function(){
                     notEmpty:{
                         message:"用户名不能为空"
                     },
-                    //长度校验
-                    stringLength: {
-                        min: 6,
-                        max: 12,
-                        message: '用户名长度必须在6到12之间'
+                    callback:{
+                        message:"用户名错误"
                     }
-
                 }
             },
             password:{
@@ -49,6 +45,9 @@ $(function(){
                         min: 6,
                         max: 12,
                         message: '用户名长度必须在6到12之间'
+                    },
+                    callback:{
+                        message:"密码错误"
                     }
 
                 }
@@ -59,13 +58,68 @@ $(function(){
 
 
 
+//统一获取 表单校验实例
+var validator = $("#lt-login-form").data("bootstrapValidator");
+//功能2、登陆功能
+    /*
+
+    因为bootstrap表单组件里，默认是用表单提交的方式，所以在表单校验成功 点击登陆按钮后会会默认按照表单
+    方式进行提交，并且页面会发生跳转，我们实际需要进行ajax异步请求进行提交。
+
+    所以我们给表单绑定一个校验完成事件，使用ajax提交
+
+     */
+
+    $("#lt-login-form").on("success.form.bv",function(e){
+        //阻止浏览器默认提交
+        e.preventDefault();
+
+        //发送ajax请求
+        $.ajax({
+            type:"post",
+            url:"/employee/employeeLogin",
+            data:$(this).serialize(),
+            dataType:"json",
+            success:function( info ){
+                //console.log(info);
+                //登录成功 跳转到首页
+                if( info.success ){
+                    location.href = "index.html";
+                }
+
+
+                //登录失败 进行提示
+                // 用户名错误
+                if( info.error === 1000){
+
+                    validator.updateStatus("username","INVALID","callback");
+
+
+                }
+
+                // 密码错误
+                if( info.error === 1001){
+                    validator.updateStatus("password","INVALID","callback");
+                }
+
+
+
+            }
+        });
+
+    });
 
 
 
 
+//功能3、重置功能
 
+    /*给重置按钮绑定一个点击事件 调用插件的重置方法*/
 
-
+    $("button[type=reset]").on("click",function(){
+        //console.log("事件绑定成功");
+        validator.resetForm();
+    });
 
 
 
