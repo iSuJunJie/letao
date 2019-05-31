@@ -1,0 +1,18 @@
+/* 公共样式 */
+* {
+  margin: 0;
+  padding: 0;
+}
+a,
+a:link,
+a:hover,
+a:visited,
+a:active {
+  color: #000;
+  text-decoration: none;
+}
+ul,
+ol,
+dl {
+  list-style: none;
+}
