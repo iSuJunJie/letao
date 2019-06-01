@@ -1,4 +1,4 @@
-/* 公共样式 */
+/* 网站公共样式 */
 * {
   margin: 0;
   padding: 0;
@@ -15,4 +15,119 @@ ul,
 ol,
 dl {
   list-style: none;
+}
+/* 侧边栏样式 */
+html,
+body {
+  height: 100%;
+}
+.lt-aside {
+  z-index: 999;
+  width: 180px;
+  height: 100%;
+  background-color: #222D32;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 2s;
+  /* 标题 */
+  /*用户*/
+  /*导航*/
+}
+.lt-aside .title {
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+  color: #fff;
+  background-color: #367FA9;
+}
+.lt-aside .user {
+  padding-top: 30px;
+  text-align: center;
+}
+.lt-aside .user img {
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.lt-aside .user p {
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  color: #fff;
+}
+.lt-aside .nav {
+  margin-top: 25px;
+  /* 导航点击高亮 */
+}
+.lt-aside .nav a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  color: #fff;
+  padding-left: 40px;
+  border-left: 3px solid transparent;
+}
+.lt-aside .nav a i {
+  margin-right: 5px;
+}
+.lt-aside .nav a.current {
+  background-color: #1D1F21;
+  border-color: #006699;
+}
+.lt-aside .nav .secondNav a {
+  padding-left: 60px;
+}
+.lt-aside.hide-aside {
+  left: -180px;
+}
+/* 主体样式 */
+.lt-content {
+  width: 100%;
+  height: 1500px;
+  background-color: pink;
+  padding-left: 180px;
+  padding-top: 50px;
+  transition: all 2s;
+  /* 头部顶条*/
+  /* 面包导航 */
+}
+.lt-content .topbar {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #3C8DBC;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-left: 180px;
+  transition: all 2s;
+}
+.lt-content .topbar a {
+  width: 50px;
+  height: 50px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+.lt-content .topbar.hide-aside {
+  padding-left: 0px;
+}
+.lt-content .breadNav {
+  margin: 20px 0;
+  font-size: 14px;
+}
+.lt-content .breadNav a {
+  color: #337AB7;
+}
+.lt-content .breadNav a.active {
+  color: #777;
+}
+.lt-content.hide-aside {
+  padding-left: 0px;
 }
