@@ -48,11 +48,11 @@ $(function(){
 
 
 
-    //功能1：点击分类管理 二级分类列表DropDown+过渡
+    //功能1：点击分类管理 二级分类列表sildeDown()
 
-    $("#categroy").on("click",function(){
+    $(".nav .categroy").on("click",function(){
 
-        $(".secondNav").stop().slideToggle();
+        $(".nav .secondNav").stop().slideToggle();
     });
 
 
