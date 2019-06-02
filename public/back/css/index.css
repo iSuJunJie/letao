@@ -1,0 +1,9 @@
+/* 数据报表样式 */
+.lt-content .showData {
+  width: 100%;
+  padding-top: 50px;
+}
+.lt-content .showData .echart {
+  width: 48%;
+  height: 400px;
+}
