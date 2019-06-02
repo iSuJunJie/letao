@@ -1,0 +1,16 @@
+/* 一级分类表格样式 */
+.lt-content {
+  /* 一级分类表格样式 */
+  /* 一级分类分页插件样式 */
+}
+.lt-content .firstCateTable {
+  margin-top: 20px;
+}
+.lt-content .firstCateTable table th,
+.lt-content .firstCateTable td {
+  text-align: center;
+}
+.lt-content .firstCatePagenator {
+  text-align: right;
+}
+/* 添加一级分类 模态框样式*/
