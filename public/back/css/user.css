@@ -1,0 +1,19 @@
+/* 数据表格样式 */
+.lt-content {
+  /*分页模块*/
+}
+.lt-content #userTable th {
+  text-align: center;
+  vertical-align: middle;
+}
+.lt-content #userTable td {
+  text-align: center;
+  vertical-align: middle;
+}
+.lt-content .paging {
+  text-align: right;
+}
+/* 模态框 */
+#myModal .modal-content {
+  margin-top: 200px;
+}

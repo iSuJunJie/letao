@@ -77,6 +77,48 @@
                 <li><a class="active">用户管理</a></li>
             </ol>
         </div>
+        
+        
+        
+        
+        <!--用户表格-->
+        <table id="userTable" class="table table-bordered">
+            <!--表格头-->
+            <thead>
+                <tr>
+                    <th width="10%">序号</th>
+                    <th width="20%">用户名</th>
+                    <th width="30%">手机号</th>
+                    <th width="20%">状态</th>
+                    <th width="20%">操作</th>
+                </tr>
+            </thead>
+            
+            <!--表格体-->
+            <tbody>
+                <!--<tr>-->
+                    <!--<td>1</td>-->
+                    <!--<td>itcast</td>-->
+                    <!--<td>15102324243</td>-->
+                    <!--<td>正常</td>-->
+                    <!--<td>-->
+                        <!--<button class="btn btn-danger">-->
+                            <!--禁用-->
+                        <!--</button>-->
+                    <!--</td>-->
+                <!--</tr>-->
+            
+            </tbody>
+        </table>
+
+
+
+
+        <!-- 分页 -->
+        <div class="paging">
+            <ul class="userPagenator"></ul>
+        </div>
+
     </div>
 </div>
 
@@ -132,22 +174,56 @@
                 <h4 class="modal-title">温馨提示</h4>
             </div>
             <div class="modal-body">
-                <p style="color:#A94442;"><i class="glyphicon glyphicon-circle-arrow-right"></i>您确定要退出后台管理系统吗？</p>
+                <p style="color:#A94442;"><i class="glyphicon glyphicon-circle-arrow-right"></i>你确定禁用该用户吗？</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button id="btn-logout"  type="button" class="btn btn-primary">退出</button>
+                    <button id="btn-isDelete"  type="button" class="btn btn-primary">确定</button>
             </div>
         </div>
     </div>
 </div>
 
 
+<!--用户表格数据模板-->
+<script type="text/html"  id="userTpl">
+
+    {{ each rows v i}}
+
+        <tr>
+            <td>{{ i+1 + (page-1)*size }}</td>
+            <td>{{ v.username }}</td>
+            <td>{{ v.mobile }}</td>
+            <td>{{ v.isDelete===1?"正常":"禁用" }}</td>
+            <td data-userID="{{ v.id }}" data-userState="{{ v.isDelete }}">
+                {{ if v.isDelete===1 }}
+                    <button class="btn btn-danger btn-state" data-toggle="modal" data-target="#myModal">禁用</button>
+                {{ /if }}
+
+                {{ if v.isDelete===0 }}
+                    <button class="btn btn-success btn-state" data-toggle="modal" data-target="#myModal">启用</button>
+                {{ /if }}
+
+            </td>
+        </tr>
+
+
+    {{ /each}}
+
+
+</script>
+
 
 <!--引入Jquery.js文件-->
 <script src="lib/jquery/jquery.min.js"></script>
 <!--引入bootstrap.js文件-->
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<!--引入基于bootStrap的分页插件-->
+<script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+
+
+<!--引入数据模板.js文件 独立的不依赖于其他库-->
+<script src="lib/artTemplate/template-web.js"></script>
 
 <!--引入common.js文件-->
 <script src="js/common.js"></script>
