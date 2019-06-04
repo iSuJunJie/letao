@@ -1,0 +1,42 @@
+/* 首页样式 */
+.lt-main .nav {
+  padding: 10px;
+}
+.lt-main .nav li {
+  float: left;
+  width: 33.33%;
+}
+.lt-main .nav li a {
+  width: 100%;
+}
+.lt-main .product {
+  padding: 10px;
+}
+.lt-main .product li {
+  width: 48%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 14px;
+  float: left;
+  margin-bottom: 5px;
+}
+.lt-main .product li:nth-child(odd) {
+  margin-right: 4%;
+}
+.lt-main .product li a {
+  width: 100%;
+  color: #bbb;
+  text-align: center;
+}
+.lt-main .product li a p {
+  margin-bottom: 10px;
+}
+.lt-main .product li a span:first-of-type {
+  color: red;
+}
+.lt-main .product li a span:last-of-type {
+  text-decoration: line-through;
+}
+.lt-main .product li a button {
+  margin-top: 10px;
+}

@@ -64,6 +64,7 @@ a:hover,
 a:link,
 a:visited,
 a:active {
+  display: block;
   color: #000;
   text-decoration: none;
 }
