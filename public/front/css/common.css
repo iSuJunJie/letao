@@ -65,7 +65,6 @@ a:link,
 a:visited,
 a:active {
   display: block;
-  color: #000;
   text-decoration: none;
 }
 input,
@@ -97,6 +96,7 @@ img {
   padding-top: 45px;
   padding-bottom: 55px;
   position: relative;
+  overflow: hidden;
 }
 /* 头部样式 */
 .lt-header {
@@ -141,6 +141,7 @@ img {
   height: 100%;
   position: relative;
   background-color: #fff;
+  overflow: hidden;
 }
 /* 底部样式 */
 .lt-footer {
@@ -164,6 +165,12 @@ img {
   font-size: 14px;
   color: #fff;
 }
+.lt-footer li a p {
+  color: #fff;
+}
 .lt-footer li a.current {
+  color: orange;
+}
+.lt-footer li a.current p {
   color: orange;
 }
