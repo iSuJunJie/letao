@@ -1,0 +1,168 @@
+/* css reset 样式重置*/
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  /*所有盒子布局采用内减模式*/
+  box-sizing: border-box;
+  /* 兼容-webkit-内核浏览器 */
+  -webkit-box-sizing: border-box;
+  /*去除移动端点击触屏时背景颜色*/
+  -webkit-tap-highlight-color: transparent;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  color: #000;
+  font-family: 'Microsoft YaHei', Arial, sans-serif;
+}
+ol,
+dl,
+ul {
+  list-style: none;
+}
+a,
+a:hover,
+a:link,
+a:visited,
+a:active {
+  color: #000;
+  text-decoration: none;
+}
+input,
+img,
+button {
+  border: none;
+  outline: none;
+  /* 在 移动端浏览器 表单可能会出现 阴影 高亮 3d效果,需要清除*/
+  -webkit-appearance: none;
+}
+/* 在使用字体图标,字体不切斜,因为i em标签默认倾斜*/
+em,
+i {
+  font-style: normal;
+}
+img {
+  display: block;
+  width: 100%;
+}
+/* 以下是公共的页面组件样式 */
+/* 布局样式 */
+.lt-layout {
+  width: 100%;
+  height: 100%;
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0 auto;
+  background-color: pink;
+  padding-top: 45px;
+  padding-bottom: 55px;
+  position: relative;
+}
+/* 头部样式 */
+.lt-header {
+  width: 100%;
+  height: 45px;
+  background-color: #006699;
+  position: absolute;
+  padding-left: 45px;
+  padding-right: 45px;
+  top: 0;
+  left: 0;
+  /* 标题 */
+}
+.lt-header .title {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: normal;
+}
+.lt-header a {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+}
+.lt-header a.home {
+  left: 0;
+  top: 0;
+}
+.lt-header a.search {
+  right: 0;
+  top: 0;
+}
+/* 主体样式 */
+.lt-main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #fff;
+}
+/* 底部样式 */
+.lt-footer {
+  width: 100%;
+  height: 55px;
+  background-color: #006699;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+.lt-footer li {
+  float: left;
+  width: 25%;
+}
+.lt-footer li a {
+  padding-top: 10px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+}
+.lt-footer li a.current {
+  color: orange;
+}

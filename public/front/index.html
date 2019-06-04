@@ -7,14 +7,135 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>乐淘商城</title>
 
+    <!--引入网站LOGO-->
+    <link rel="shortcut icon" href="favicon.ico">
+
+
+    <!--引入MUI框架样式文件-->
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+
+
+    <!--引入字体样式文件-->
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+    <!--引入公共样式文件-->
+    <link rel="stylesheet" href="css/common.css">
     <!--引入首页样式文件-->
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
 
+    <!--布局容器-->
+    <div class="lt-layout">
 
 
+        <!--头部-->
+        <div class="lt-header">
+            <!--主页-->
+            <a href="index.html" class="home"><i class="fa fa-home"></i></a>
+
+            <!--标题-->
+            <h3 class="title">乐淘云购</h3>
+
+            <!--搜索-->
+            <a href="search.html" class="search"><i class="fa fa-search"></i></a>
+        </div>
+
+
+
+        <!--主体-->
+        <div class="lt-main">
+
+            <!--引入MUI框架区域滚动DOM结构-->
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+
+
+                   
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+        <!--底部-->
+        <div class="lt-footer">
+
+            <ul>
+                <li>
+                    <a class="current" href="index.html">
+                        <i class="fa fa-home" ></i>
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-bars"></i>
+                        <p>分类</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-shopping-cart"></i>
+                        <p>购物车</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-user"></i>
+                        <p>用户中心</p>
+                    </a>
+                </li>
+
+            </ul>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+<!--引入ZeptoJS文件-->
+<script src="lib/zepto/zepto.min.js"></script>
+
+<!--引入MUI组件的JS文件-->
+<script src="lib/mui/js/mui.js"></script>
+
+<!--引入公共JS文件-->
+<script src="js/common.js"></script>
 <!--引入首页JS文件-->
 <script src="js/index.js"></script>
 </body>
