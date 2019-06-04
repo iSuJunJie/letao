@@ -52,21 +52,8 @@
                 <div class="mui-scroll">
                     <!--这里放置真实显示的DOM内容-->
                     <ul>
-                        <li><a class="current" href="#">运动馆</a></li>
-                        <li><a href="#">运动馆</a></li>
-                        <li><a href="#">运动馆</a></li>
-                        <li><a href="#">运动馆</a></li>
-                        <li><a href="#">运动馆</a></li>
-                        <li><a href="#">运动馆</a></li>
-                        <li><a href="#">运动馆</a></li>
-                        <li><a href="#">运动馆</a></li>
-                        <li><a href="#">运动馆</a></li>
-                        <li><a href="#">运动馆</a></li>
-                        <li><a href="#">运动馆</a></li>
-                        <li><a href="#">运动馆</a></li>
-                        <li><a href="#">运动馆</a></li>
-                        <li><a href="#">运动馆</a></li>
-                        <li><a href="#">运动馆</a></li>
+                        <!--<li><a class="current" href="#">运动馆</a></li>-->
+
                     </ul>
 
 
@@ -82,36 +69,6 @@
                     <!--这里放置真实显示的DOM内容-->
                     <ul class="mui-clearfix">
 
-                        <li>
-                            <a href="#">
-                                <img src="images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </li>
                     </ul>
 
 
@@ -163,39 +120,76 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--一级分类列表数据模板-->
+<script type="text/html" id="leftTpl">
+        {{ each rows v i}}
+            {{ if i === 0 }}
+
+                <li><a data-id="{{ v.id }}" class="current" href="#">{{ v.categoryName }}</a></li>
+
+            {{ else }}
+
+                <li><a data-id="{{ v.id }}" class="" href="#">{{ v.categoryName }}</a></li>
+
+            {{ /if }}
+
+        {{ /each }}
+</script>
+
+<!--二级分类列表数据模板-->
+<script type="text/html" id="rightTpl">
+    {{ each rows v i }}
+
+        <li>
+            <a href="#">
+                <img src="{{ v.brandLogo }}" alt="">
+                <p>{{ v.brandName }}</p>
+            </a>
+        </li>
+
+    {{ /each }}
+</script>
+
 <!--引入ZeptoJS文件-->
 <script src="lib/zepto/zepto.min.js"></script>
 
 <!--引入MUI组件的JS文件-->
 <script src="lib/mui/js/mui.js"></script>
+
+
+<!--引入模板引擎JS文件-->
+<script src="lib/artTemplate/template-web.js"></script>
 
 <!--引入公共JS文件-->
 <script src="js/common.js"></script>
