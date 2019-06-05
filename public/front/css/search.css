@@ -1,0 +1,42 @@
+/* 搜索页主体样式 */
+.lt-main {
+  /* 搜索框样式 */
+  /* 历史记录 样式*/
+}
+.lt-main .search {
+  height: 54px;
+  padding: 10px;
+}
+.lt-main .search input {
+  background-color: #fff;
+  border: 1px solid #007AFF;
+  padding: 10px 55px 10px 15px;
+  margin: 0;
+  font-size: 12px;
+  text-align: left;
+}
+.lt-main .search button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 0px 5px 5px 0;
+}
+.lt-main .history {
+  padding: 10px;
+  /* 历史记录 标题样式*/
+  /* 历史记录 主体样式*/
+}
+.lt-main .history .title {
+  height: 30px;
+  font-size: 12px;
+  color: #666;
+  line-height: 30px;
+}
+.lt-main .history .content li {
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px dashed #ccc;
+}
+.lt-main .history .content li i {
+  line-height: 30px;
+}

@@ -35,6 +35,7 @@ $(function(){
 
     //功能2：点击一级分类列表渲 根据id渲染对应的二级分类列表
     $(".left ul").on("click","a",function(){
+        $(this).addClass("current").parent().siblings().find("a").removeClass("current");
         var id = $(this).data("id");
         renderSecondCategory(id);
     });
