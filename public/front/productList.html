@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--设置视口-->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>乐淘商城</title>
+
+    <!--引入网站LOGO-->
+    <link rel="shortcut icon" href="favicon.ico">
+
+
+    <!--引入MUI框架样式文件-->
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+
+
+    <!--引入字体样式文件-->
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+    <!--引入公共样式文件-->
+    <link rel="stylesheet" href="css/common.css">
+    <!--引入首页样式文件-->
+    <link rel="stylesheet" href="css/productList.css">
+</head>
+<body>
+
+
+<!--布局容器-->
+<div class="lt-layout">
+
+
+    <!--头部-->
+    <div class="lt-header">
+        <!--主页-->
+        <a href="javascript:history.back();" class="home"><i class="mui-icon mui-icon-back"></i></a>
+
+        <!--标题-->
+        <h3 class="title">搜索中心</h3>
+
+
+    </div>
+
+
+
+    <!--主体-->
+    <div class="lt-main">
+
+        <!--搜索-->
+        <div class="search">
+            <input type="search" placeholder="请输入搜索关键字">
+            <button class="mui-btn mui-btn-primary btn-search">搜索</button>
+        </div>
+
+
+
+        <!--排序模块-->
+
+        <div class="sort mui-clearfix">
+
+            <a data-sortType="time" href="#">上架时间 <i class="fa fa-angle-down"></i></a>
+            <a data-sortType="price"  href="#">价格 <i class="fa fa-angle-down"></i></a>
+            <a data-sortType="num" href="#">库存 <i class="fa fa-angle-down"></i></a>
+            <a data-sortType="discount" href="#">折扣 <i class="fa fa-angle-down"></i></a>
+
+
+        </div>
+
+
+
+
+
+        <!--商品列表模块-->
+        <div class="productList">
+
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+
+
+                    <ul class="mui-clearfix">
+                        <!--<li>-->
+                            <!--<a href="#">-->
+                                <!--<img src="images/product.jpg" alt="">-->
+                                <!--<p class="mui-ellipsis-2">adidas阿迪达斯 男式 场下休闲篮球鞋S83700场下休闲篮球鞋S83700 </p>-->
+                                <!--<span>¥560</span> <span>¥600</span>-->
+                                <!--<button class="mui-btn mui-btn-primary mui-btn-outlined">立即购买</button>-->
+                            <!--</a>-->
+                        <!--</li>-->
+
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+    <!--底部-->
+    <div class="lt-footer">
+
+        <ul>
+            <li>
+                <a  href="index.html">
+                    <i class="fa fa-home" ></i>
+                    <p>首页</p>
+                </a>
+            </li>
+            <li>
+                <a class="current" href="#">
+                    <i class="fa fa-bars"></i>
+                    <p>分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-shopping-cart"></i>
+                    <p>购物车</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-user"></i>
+                    <p>用户中心</p>
+                </a>
+            </li>
+
+        </ul>
+
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--搜索商品列表数据模板-->
+<script type="text/html" id="proTpl">
+
+        {{ each data v i }}
+
+                <li>
+                    <a data-id="{{ v.id }}" href="#">
+
+                        <img src="{{ v.pic[0].picAddr }}" alt="">
+
+                        <p class="mui-ellipsis-2">{{ v.proName }}</p>
+
+                        <span>¥{{ v.price }}</span> <span>¥{{ v.oldPrice }}</span>
+
+                        <button class="mui-btn mui-btn-primary mui-btn-outlined">立即购买</button>
+
+                    </a>
+                </li>
+
+
+        {{ /each }}
+
+</script>
+
+
+
+
+
+
+<!--引入ZeptoJS文件-->
+<script src="lib/zepto/zepto.min.js"></script>
+
+<!--引入MUI组件的JS文件-->
+<script src="lib/mui/js/mui.js"></script>
+
+
+<!--引入模板引擎JS文件-->
+<script src="lib/artTemplate/template-web.js"></script>
+
+<!--引入公共JS文件-->
+<script src="js/common.js"></script>
+<!--引入首页JS文件-->
+<script src="js/productList.js"></script>
+</body>
+</html>

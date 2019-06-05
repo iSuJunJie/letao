@@ -29,6 +29,7 @@
   text-align: center;
 }
 .lt-main .product li a p {
+  height: 50px;
   margin-bottom: 10px;
 }
 .lt-main .product li a span:first-of-type {
@@ -39,4 +40,6 @@
 }
 .lt-main .product li a button {
   margin-top: 10px;
+  display: block;
+  margin: 10px auto 0;
 }
