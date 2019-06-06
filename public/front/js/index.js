@@ -5,10 +5,24 @@
 
 $(function(){
 
-    //功能1：手动初始化图片轮播模块
-    //获得slider插件对象
-    var gallery = mui('.mui-slider');
-    gallery.slider({
-        interval:1000//自动轮播周期，若为0则不自动播放，默认为0；
-    });
+//获取地址栏中的关键字
+    function getSearchKey(){
+
+        //获取到已编码的关键字
+        var encodeKey = location.search;
+
+        //解码  ?key=耐克
+        var key = decodeURI(encodeKey);
+
+        //将？号截取掉   key=耐克
+        key = key.slice(1);
+
+
+        var arr = key.split('=');
+
+
+        return arr[1];
+
+
+    };
 });

@@ -1,0 +1,49 @@
+/* 产品详情页样式*/
+.commonBox {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  font-size: 17px;
+}
+.sizeBox {
+  width: 25px;
+  height: 25px;
+  float: left;
+  border: 1px solid #ccc;
+  line-height: 25px;
+  text-align: center;
+  margin: 5px;
+  font-size: 12px;
+}
+.sizeBox.current {
+  background-color: orange;
+  color: #fff;
+}
+.lt-main .productPrice span:first-of-type {
+  color: red;
+}
+.lt-main .productPrice span:last-of-type {
+  color: #000;
+  font-size: 12px;
+  text-decoration: line-through;
+  margin: 0 5px;
+}
+.lt-main .productSize .text {
+  width: 40px;
+  height: 55px;
+  margin: 0;
+}
+.lt-main .productNum span:first-of-type {
+  font-size: 12px;
+  color: #111;
+}
+.lt-footer {
+  padding: 10px;
+  background-color: #EFEFF4;
+  border-top: 1px solid red;
+}
+.lt-footer a {
+  line-height: 35px;
+}
+.lt-footer button {
+  margin: 0 5px;
+}

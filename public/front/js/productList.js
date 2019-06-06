@@ -97,6 +97,33 @@ $(function(){
 
 
 
+//功能4：给每个商品都绑定点击事件  移动端 点击事件最好换成tap事件
+    //mui框架 默认禁止a标签的点击事件
+
+    $(".productList ul").on("tap","a",function(){
+
+       //点击某个商品 跳转到商品详情页
+       //商品详情页渲染需要知道是哪个商品，所以跳过去的时候 去要把商品id带过去
+
+       //采用地址跳转的方法
+
+
+        //注意一点，自定义属性名不能出现大写字母，即使你大写了，浏览器也会把你变成小写。
+
+        location.href = "productInfo.html?proId="+$(this).data("id");
+
+    });
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -203,26 +230,6 @@ $(function(){
 
 
 
-    //获取地址栏中的关键字
-    function getSearchKey(){
-
-        //获取到已编码的关键字
-        var encodeKey = location.search;
-
-        //解码  ?key=耐克
-        var key = decodeURI(encodeKey);
-
-        //将？号截取掉   key=耐克
-        key = key.slice(1);
-
-
-        var arr = key.split('=');
-
-
-        return arr[1];
-
-
-    };
 
 
 });
