@@ -1,0 +1,61 @@
+/*购物车样式*/
+.lt-main .cart-item {
+  height: 110px;
+  padding: 10px;
+}
+.lt-main .cart-item .itemInfo {
+  height: 90px;
+}
+.lt-main .cart-item .itemInfo .left {
+  width: 60px;
+  height: 90px;
+}
+.lt-main .cart-item .itemInfo .left input {
+  width: 20px;
+  height: 20px;
+  appearance: checkbox;
+  -webkit-appearance: checkbox;
+}
+.lt-main .cart-item .itemInfo .right {
+  overflow: hidden;
+  height: 90px;
+  line-height: 30px;
+  padding-left: 10px;
+}
+.lt-main .cart-item .itemInfo .right p:first-of-type {
+  font-size: 15px;
+  color: #000;
+}
+.lt-main .cart-item .itemInfo .right p:nth-of-type(2) span:first-of-type {
+  color: red;
+  font-size: 14px;
+}
+.lt-main .cart-item .itemInfo .right p:nth-of-type(2) span:nth-of-type(2) {
+  font-size: 12px;
+  text-decoration: line-through;
+}
+.lt-main .cart-item .itemInfo .right p:nth-of-type(2) span:last-of-type {
+  font-size: 14px;
+  color: #000;
+}
+/* 模态框样式 */
+.sizeBox {
+  width: 25px;
+  height: 25px;
+  float: left;
+  border: 1px solid #ccc;
+  line-height: 25px;
+  text-align: center;
+  margin: 5px;
+  font-size: 12px;
+}
+.sizeBox.current {
+  background-color: orange;
+  color: #fff;
+}
+.edit-productSize .text {
+  height: 70px;
+}
+.edit-productNum {
+  text-align: left;
+}
